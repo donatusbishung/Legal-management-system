@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.lightgray {
+    background: #7C7C7C;
+}
+
+input {
+    outline: none !important;
+}
+.custom-subheader {
+    background-color: #595959!important;
+  }
+  .customItemsBtn {
+    background-color: #696969 !important;
+    color: white !important;
+    box-shadow: none !important;
+    /* margin-bottom: 2px !important; */
+  }
+  .custom-subheader:hover {
+    outline: none !important;
+    
+  }
+  .customItemsBtn:focus {
+    background-color: #4A4A4A !important;
+  }
+  /*/* styles.css */
+/* Target the date input field */
+input[type="date"] {
+  /* Apply styles to the entire input field */
+}
+
+/* Target the date input field icon */
+/* Path 434 */
+
+.hover-effect {
+  /* Background color for non-selected rows */
+  background-color: transparent; /* Set your desired background color */
+}
+
+.hover-effect-selected {
+  /* Background color for selected rows */
+  background-color: #4a4a4a; /* Set your desired background color */
+}
+
+/* Apply custom checkbox color */
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: #fff;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked:hover {
+ color: #4a4a4a !important;
+}
+.custom-header {
+  background-color: #DBDADA !important; /* Adjust the background color as needed */
+}
