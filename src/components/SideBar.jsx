@@ -25,7 +25,7 @@ export default function NestedList() {
               component="div"
               id="nested-list-subheader"
             >
-              <h2 className="text-[17px] text-white font-[200]">
+              <h2 className="text-[15px] text-white font-[300]">
                 LEGAL CASE MANAGEMENT
               </h2>
             </ListSubheader>
@@ -36,13 +36,13 @@ export default function NestedList() {
             label="Cases"
             mainIcon={<HomeRepairServiceIcon />}
             subItems={[
-              { label: <Link to="/addCase" className="">Add Cases</Link>, icon: <HomeRepairServiceIcon  /> },
-              { label:<Link to="/allCase" className="">All Cases</Link> , icon: <HomeRepairServiceIcon  /> },
-              { label: "All Pending Cases", icon: <HomeRepairServiceIcon  /> },
-              { label: "All Case History", icon: <HomeRepairServiceIcon  /> },
-              { label: "My Open Cases", icon: <HomeRepairServiceIcon  /> },
-              { label: "My Pending Cases", icon: <HomeRepairServiceIcon  /> },
-              { label: "My Case History", icon: <HomeRepairServiceIcon  /> },
+              { label: <Link to="/addCase" className="text-[14px]">Add Cases</Link>, icon: <HomeRepairServiceIcon  /> },
+              { label:<Link to="/allCase" className="text-[14px]">All Cases</Link> , icon: <HomeRepairServiceIcon  /> },
+              { label:<Link to="/pendingCases" className="text-[14px]">All Pending Cases</Link>, icon: <HomeRepairServiceIcon  /> },
+              { label:<Link to="/allCaseHistory" className="text-[14px]">All Case History</Link> , icon: <HomeRepairServiceIcon  /> },
+              { label:<Link to="/myOpenCases" className="text-[14px]">My Open Cases</Link>, icon: <HomeRepairServiceIcon  /> },
+              { label:<Link to="/myPendingCases" className="text-[14px]">My Pending Cases</Link>, icon: <HomeRepairServiceIcon  /> },
+              { label:<Link to="/myCasesHistory" className="text-[14px]">My Case History</Link> , icon: <HomeRepairServiceIcon  /> },
             ]}
           />
           {/* Add other list items or dropdowns here */}

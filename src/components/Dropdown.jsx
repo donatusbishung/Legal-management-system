@@ -31,7 +31,7 @@ const Dropdown = ({ label, mainIcon, subItems }) => {
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List className='bg-[#9D9D9D]' component="div" disablePadding>
           {subItems.map((item, index) => (
-            <ListItemButton key={index} sx={{ pl: 4 }}>
+            <ListItemButton key={index} sx={{ pl: 3 }}>
               <ListItemIcon>
                 {item.icon}
               </ListItemIcon>
