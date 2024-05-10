@@ -39,7 +39,9 @@ const AllCaseHistory = () => {
 
   return (
     <div className="dashboard w-full flex h-screen">
+      <div className="div sidebar w-[22%] fixed h-full">
       <SideBar />
+      </div>
       <div
         className="main-content min-w-0 w-full "
         style={{ height: "fit-content" }}
