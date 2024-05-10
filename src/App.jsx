@@ -8,6 +8,10 @@ import AllCaseHistory from "./pages/Cases/AllCaseHistory";
 import MyCasesHistory from "./pages/Cases/MyCasesHistory";
 import MyPendingCases from "./pages/Cases/MyPendingCases";
 import MyOpenCases from "./pages/Cases/MyOpenCases";
+import AllLawyers from "./pages/Lawyers/AllLawyers"
+import AddLawyers from "./pages/Lawyers/AddLawyers";
+import UpcomingHearing from "./pages/Hearing/UpcomingHearing";
+import AddCasePoint from "./pages/CasePoints/AddCasePoint"
 
 function App() {
   return (
@@ -24,8 +28,12 @@ function App() {
           <Route path="/myOpenCases" element={<MyOpenCases />} />
           <Route path="/myPendingCases" element={<MyPendingCases />} />
           <Route path="/pendingCases" element={<PendingCases />} />
+          <Route path="/allLawyers" element={<AllLawyers />} />
+          <Route path="/addLawyers" element={<AddLawyers />} />
+          <Route path="/upcomingHearing" element={<UpcomingHearing />} />
+          <Route path="/addCasePoint" element={<AddCasePoint />} />
         </Routes>
-      </Router>
+      </Router> 
     </>
   );
 }

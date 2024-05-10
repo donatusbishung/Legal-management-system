@@ -63,4 +63,55 @@ input[type="date"] {
 }
 .custom-header {
   background-color: #DBDADA !important; /* Adjust the background color as needed */
+}.custom-column-header {
+  font-weight: bold;
+}
+
+
+.custom-box-style {
+  width: 210px;
+  height: 80px;
+  /* background: linear-gradient(179.78deg, #0B6993 12.22%, #66C2F2 115.53%); */
+  border-radius: 8px;
+}
+
+.total-bookings {
+  position: absolute;
+  /* left: 23.44%;
+  right: 70.26%;
+  top: 10.8%;
+  bottom: 87.84%; */
+  font-weight: 200;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.total-bookings-value {
+  /* position: absolute;
+  left: 23.44%;
+  right: 73.65%;
+  top: 12.56%;
+  bottom: 84.4%; */
+  font-weight: 500;
+
+  font-size: 32px;
+  /* line-height: 38px; */
+  color: #FFFFFF;
+}
+
+.sidebar {
+  width: 22%;
+  height: 100%;
+  background-color: #696969;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-left: 22%; /* Same as sidebar width */
+}
+
+.dashboard-header {
+  width: calc(100% - 22%); /* Subtract sidebar width from 100% */
+  margin-left: 22%; /* Same as sidebar width */
+  z-index: 10; /* Ensure it's above the sidebar */
 }

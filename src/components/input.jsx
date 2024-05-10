@@ -11,7 +11,8 @@ function Input({
   label,
   inputClass,
   labelClass,
-  contClass
+  contClass,
+  accept
 }) {
   const formattedValue = inputType === 'date' && value ? format(new Date(value), 'yyyy-MM-dd') : value;
   
@@ -29,8 +30,10 @@ function Input({
       name={inputName}
       value={formattedValue}
       placeholder={placeholder}
+      accept={accept}
       onChange={onChange}
       className={`bg-transparent py-4 ${inputClass}`}
+      
     />
   );
 

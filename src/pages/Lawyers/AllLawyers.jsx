@@ -8,34 +8,31 @@ import Button from "../../components/Button";
 import CaseHeader from "../../components/CaseHeader";
 import Crud from "../../components/Crud";
 import Table from "../../components/Table";
-import AllCase from "./AllCase";
 
-const AllCaseHistory = () => {
+const AllLawyers = () => {
   const columns = [
-    { field: "registrationDate", headerName: "Registration Date", width: 140 },
-    { field: "suitNo", headerName: "Suit No", width: 130 },
-    { field: "clientName", headerName: "Client Name", width: 150 },
-    { field: "lawyerName", headerName: "Lawyer Name", width: 130 },
-    { field: "caseStatus", headerName: "Case Status", width: 130 },
-    { field: "caseResult", headerName: "Case Result", width: 130 },
-    { field: "parties", headerName: "Parties", width: 180 },
+    { field: "firstName", headerName: "First Name", width: 140 },
+    { field: "middleName", headerName: "Middle Name", width: 130 },
+    { field: "lastName", headerName: "Last Name", width: 150 },
+    { field: "lawyerType", headerName: "Lawyer Type", width: 130 },
+    { field: "cases", headerName: "Cases", width: 130 },
+    { field: "lawPoints", headerName: "Law Points", width: 130 },
+    { field: "gender", headerName: "Gender", width: 180 },
   ];
 
-  const rows = [];
-   
-  for(let i = 1; i<=100 ; i++){
+  const rows = []
+  for (let i = 1; i <= 100; i++) {
     rows.push({
-            id: 1,
-            registrationDate: "10/11/2023",
-            suitNo: "AKS/124/56",
-            clientName: "Ministry of Justies",
-            lawyerName: "James Umoh",
-            caseStatus: "Open",
-            caseResult: "Pending",
-            parties: "Ministry of Agreculture VS Jumbo…",
-          },
-        )
-    }
+      id: i,
+      firstName: "Musa",
+      middleName: "Buga",
+      lastName: "Umoh",
+      lawyerType: "Civil",
+      cases: 12,
+      lawPoints: 24,
+      gender: "Male",
+    });
+  }
 
   return (
     <div className="dashboard w-full flex h-screen">
@@ -50,7 +47,7 @@ const AllCaseHistory = () => {
           userSrc="src/assets/img/Ellipse 220.png"
           showUser={true}
         />
-        <CaseHeader label="All Cases" />
+        <CaseHeader label="All Lawyers" />
         <Crud />
         <Table columns={columns} rows={rows} />
         <div></div>
@@ -59,4 +56,4 @@ const AllCaseHistory = () => {
   );
 };
 
-export default AllCaseHistory;
+export default AllLawyers;

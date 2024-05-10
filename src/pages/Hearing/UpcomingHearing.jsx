@@ -8,34 +8,29 @@ import Button from "../../components/Button";
 import CaseHeader from "../../components/CaseHeader";
 import Crud from "../../components/Crud";
 import Table from "../../components/Table";
-import AllCase from "./AllCase";
 
-const AllCaseHistory = () => {
+const UpcomingHearing = () => {
   const columns = [
-    { field: "registrationDate", headerName: "Registration Date", width: 140 },
-    { field: "suitNo", headerName: "Suit No", width: 130 },
-    { field: "clientName", headerName: "Client Name", width: 150 },
-    { field: "lawyerName", headerName: "Lawyer Name", width: 130 },
-    { field: "caseStatus", headerName: "Case Status", width: 130 },
-    { field: "caseResult", headerName: "Case Result", width: 130 },
-    { field: "parties", headerName: "Parties", width: 180 },
+    { field: "suitNo", headerName: "Suit No", width: 200 },
+    { field: "lawyer", headerName: "Lawyer", width: 200 },
+    { field: "email", headerName: "Email", width: 200 },
+    { field: "hearingDate", headerName: "Hearing Date ", width: 200 },
+    { field: "adjustedDate", headerName: "Adjusted Date", width: 200 },
   ];
 
   const rows = [];
-   
-  for(let i = 1; i<=100 ; i++){
+  for (let i = 1; i <= 100; i++) {
     rows.push({
-            id: 1,
-            registrationDate: "10/11/2023",
-            suitNo: "AKS/124/56",
-            clientName: "Ministry of Justies",
-            lawyerName: "James Umoh",
-            caseStatus: "Open",
-            caseResult: "Pending",
-            parties: "Ministry of Agreculture VS Jumbo…",
-          },
-        )
-    }
+      id: i,
+      suitNo: "AKS/234/678",
+      lawyer: "Umoh White Okon",
+      email: "umoh.white@gmail.com",
+      hearingDate: "Agenda of l….",
+      adjustedDate: "Male",
+    });
+    
+
+  }
 
   return (
     <div className="dashboard w-full flex h-screen">
@@ -50,7 +45,7 @@ const AllCaseHistory = () => {
           userSrc="src/assets/img/Ellipse 220.png"
           showUser={true}
         />
-        <CaseHeader label="All Cases" />
+        <CaseHeader label="Upcoming Hearings" />
         <Crud />
         <Table columns={columns} rows={rows} />
         <div></div>
@@ -59,4 +54,4 @@ const AllCaseHistory = () => {
   );
 };
 
-export default AllCaseHistory;
+export default UpcomingHearing;

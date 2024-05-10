@@ -10,20 +10,23 @@ const CustomFooter = ({ rowCount }) => {
 };
 
 const DataTable = ({ columns, rows }) => {
-    
-        const customColumns = columns.map(column => {
-          if (column.field === 'registrationDate',"clientName",
-          "lawyerName",
-          "caseStatus",
-          "caseResult",
-          "parties" ) {
-            return {
-              ...column,
-              headerClassName: 'custom-column-header', // Apply custom header class
-            };
-          }
-          return column;
-        });
+  const customColumns = columns.map(column => {
+    if ([
+      'registrationDate',
+      'clientName',
+      'lawyerName',
+      'caseStatus',
+      'caseResult',
+      'parties'
+    ].includes(column.field)) {
+      return {
+        ...column,
+        headerClassName: 'custom-column-header', // Apply custom header class
+      };
+    }
+    return column;
+  });
+
   return (
     <div className='h-[75vh] mt-4'>
       <DataGrid
