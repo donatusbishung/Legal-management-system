@@ -163,6 +163,7 @@ const addCase = () => {
           />
         </div>
       </div>
+      {/* console.log("Hello world!"); */}
     </div>
   );
 };
