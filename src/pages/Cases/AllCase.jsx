@@ -43,7 +43,7 @@ const AllCase = () => {
 
   useEffect(() => {
     axios
-      .get("https://github.com/donatusbishung/json-file/blob/main/db.json")
+      .get("http://localhost:3000/addCases")
       .then((response) => {
         const fetchedData = response.data;
         console.log(fetchedData);
