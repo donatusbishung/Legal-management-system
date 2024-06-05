@@ -1,0 +1,102 @@
+{
+  "addCases": [
+    {
+      "id": "1",
+      "registrationDate": "10/11/2023",
+      "suitNo": "AKS/124/56",
+      "clientName": "Ministry of Justies",
+      "lawyerName": "James Umoh",
+      "caseStatus": "open",
+      "caseResult": "pending",
+      "parties": "Ministry of Agreculture VS Jumbo…",
+      "clientType": "",
+      "caseDescription": "",
+      "court": "",
+      "judges": ""
+    },
+    {
+      "id": "2",
+      "registrationDate": "10/11/2023",
+      "suitNo": "AKS/124/56",
+      "clientName": "Ministry of Justies",
+      "lawyerName": "James Umoh",
+      "caseStatus": "open",
+      "caseResult": "pending",
+      "parties": "Ministry of Agreculture VS Jumbo…",
+      "clientType": "",
+      "caseDescription": "",
+      "court": "",
+      "judges": ""
+    },
+    {
+      "id": "3",
+      "registrationDate": "10/11/2023",
+      "suitNo": "AKS/124/56",
+      "clientName": "Ministry of Justies",
+      "lawyerName": "James Umoh",
+      "caseStatus": "open",
+      "caseResult": "pending",
+      "parties": "Ministry of Agreculture VS Jumbo…",
+      "clientType": "",
+      "caseDescription": "",
+      "court": "",
+      "judges": ""
+    },
+    {
+      "id": "4",
+      "registrationDate": "10/11/2023",
+      "suitNo": "AKS/124/56",
+      "clientName": "Ministry of Justies",
+      "lawyerName": "James Umoh",
+      "caseStatus": "open",
+      "caseResult": "pending",
+      "parties": "Ministry of Agreculture VS Jumbo…",
+      "clientType": "",
+      "caseDescription": "",
+      "court": "",
+      "judges": ""
+    },
+    {
+      "id": "5",
+      "registrationDate": "10/11/2023",
+      "suitNo": "AKS/124/56",
+      "clientName": "Ministry of Justies",
+      "lawyerName": "James Umoh",
+      "caseStatus": "open",
+      "caseResult": "pending",
+      "parties": "Ministry of Agreculture VS Jumbo…",
+      "clientType": "",
+      "caseDescription": "",
+      "court": "",
+      "judges": ""
+    },
+    {
+      "id": "6",
+      "registrationDate": "10/11/2023",
+      "suitNo": "AKS/124/56",
+      "clientName": "Ministry of Justies",
+      "lawyerName": "James Umoh",
+      "caseStatus": "open",
+      "caseResult": "pending",
+      "parties": "Ministry of Agreculture VS Jumbo…",
+      "clientType": "",
+      "caseDescription": "",
+      "court": "",
+      "judges": ""
+    },
+    {
+      "id": 1717578942622,
+      "registrationDate": "08/06/2024",
+      "suitNo": "AKS/234/562",
+      "clientName": "Ministry of Works",
+      "lawyerName": "Ikechukwu Bassey",
+      "caseStatus": "Closed",
+      "caseResult": "Pending",
+      "parties": "Ministry of Power",
+      "clientType": "jkk",
+      "caseDescription": "",
+      "court": "Appeal Court",
+      "judge": "Edidion Jacob"
+    }
+  ]
+}

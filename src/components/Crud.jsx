@@ -9,8 +9,10 @@ import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import LocalPrintshopOutlinedIcon from "@mui/icons-material/LocalPrintshopOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import Select from "./Select";
+import { useNavigate } from "react-router-dom";
 
 const Crud = () => {
+  const navigate = useNavigate();
   const options = [
     { value: "1", label: "10" },
     { value: "2", label: "9" },
@@ -27,7 +29,7 @@ const Crud = () => {
     <div className="flex justify-between mt-2 px-6">
       <div className="search">
         <Input
-          label={<SearchIcon  style={{ fontSize: 25, }}  />} // Adjust the fontSize as needed
+          label={<SearchIcon style={{ fontSize: 25 }} />} // Adjust the fontSize as needed
           labelClass="text-[#AAAAAA]" // Add other classes as needed
           inputType="text"
           placeholder="Search Table"
@@ -40,7 +42,9 @@ const Crud = () => {
           label="Add"
           btnType="button"
           btnClass="px-4 shadow py-1 bg-[#AAAAAA] rounded-[3px] text-[12px] font-[500] text-[#050505] flex justify-center items-center"
-          btnClick={() => console.log("Button clicked")} // Add your button click handler
+          btnClick={() => {
+            navigate("/addCase");
+          }} // Add your button click handler
           icon={<AddIcon />}
         />
 

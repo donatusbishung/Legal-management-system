@@ -10,6 +10,8 @@ import Bar from "../../components/Bar";
 import CaseHeader from "../../components/CaseHeader";
 import SearchIcon from "@mui/icons-material/Search";
 import Table from "../../components/Table";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Dashboard = () => {
   const options = [
@@ -28,19 +30,45 @@ const Dashboard = () => {
     { field: "parties", headerName: "Parties", width: 180 },
   ];
 
-  const rows = [];
-  for (let i = 1; i <= 100; i++) {
-    rows.push({
-      id: 1,
-      registrationDate: "10/11/2023",
-      suitNo: "AKS/124/56",
-      clientName: "Ministry of Justies",
-      lawyerName: "James Umoh",
-      caseStatus: "Open",
-      caseResult: "Pending",
-      parties: "Ministry of Agreculture VS Jumbo…",
-    });
-  }
+  // const rows = [];
+  // for (let i = 1; i <= 100; i++) {
+  //   rows.push({
+  //     id: 1,
+  //     registrationDate: "10/11/2023",
+  //     suitNo: "AKS/124/56",
+  //     clientName: "Ministry of Justies",
+  //     lawyerName: "James Umoh",
+  //     caseStatus: "Open",
+  //     caseResult: "Pending",
+  //     parties: "Ministry of Agreculture VS Jumbo…",
+  //   });
+  // }
+
+  const [data, setData] = useState([]);
+  const [processedData, setProcessedData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/addCases")
+      .then((response) => {
+        const fetchedData = response.data;
+        console.log(fetchedData);
+
+        // Processing the data using a for loop
+        let tempData = [];
+        for (let i = 0; i < fetchedData.length; i++) {
+          tempData.unshift(fetchedData[i]);
+          // console.log(fetchedData[i]);
+        }
+
+        // Updating the state with processed data
+        setData(fetchedData);
+        setProcessedData(tempData);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
+  const rows = processedData;
 
   return (
     <div className="dashboard w-full flex h-screen">
@@ -85,20 +113,19 @@ const Dashboard = () => {
         </div>
         <Bar />
         <div className="div shadow">
-        <div className="flex justify-between mt-3  ">
-          <CaseHeader label="New Cases With Hearing Dates" />
-          <Input
-            label={<SearchIcon style={{ fontSize: 25 }} />}
-            labelClass="text-[#AAAAAA]"
-            inputType="text"
-            placeholder="Search Table"
-            inputClass="border-0 font-[200] outline-0 border-[#AAAAAA] h-0 w-[180px] px-2 py-3"
-            contClass="flex items-center gap- px-2  border"
-          />
+          <div className="flex justify-between mt-3  ">
+            <CaseHeader label="New Cases With Hearing Dates" />
+            <Input
+              label={<SearchIcon style={{ fontSize: 25 }} />}
+              labelClass="text-[#AAAAAA]"
+              inputType="text"
+              placeholder="Search Table"
+              inputClass="border-0 font-[200] outline-0 border-[#AAAAAA] h-0 w-[180px] px-2 py-3"
+              contClass="flex items-center gap- px-2  border"
+            />
+          </div>
+          <Table columns={columns} rows={rows} />
         </div>
-        <Table columns={columns} rows={rows} />
-        </div>
-       
       </div>
     </div>
   );

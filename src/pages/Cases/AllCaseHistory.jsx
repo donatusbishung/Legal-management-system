@@ -22,30 +22,28 @@ const AllCaseHistory = () => {
   ];
 
   const rows = [];
-   
-  for(let i = 1; i<=100 ; i++){
+
+  for (let i = 1; i <= 100; i++) {
     rows.push({
-            id: 1,
-            registrationDate: "10/11/2023",
-            suitNo: "AKS/124/56",
-            clientName: "Ministry of Justies",
-            lawyerName: "James Umoh",
-            caseStatus: "Open",
-            caseResult: "Pending",
-            parties: "Ministry of Agreculture VS Jumbo…",
-          },
-        )
-    }
+      id: 1,
+      registrationDate: "10/11/2023",
+      suitNo: "AKS/124/56",
+      clientName: "Ministry of Justies",
+      lawyerName: "James Umoh",
+      caseStatus: "Open",
+      caseResult: "Pending",
+      parties: "Ministry of Agreculture VS Jumbo…",
+    });
+  }
 
   return (
     <div className="dashboard w-full flex h-screen">
       <div className="div sidebar w-[22%] fixed h-full">
-      <SideBar />
+        <SideBar />
       </div>
       <div
         className="main-content min-w-0 w-full "
-        style={{ height: "fit-content" }}
-      >
+        style={{ height: "fit-content" }}>
         <Header
           userClass="font-[300]"
           name="Dickson Obi"
